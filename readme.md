@@ -1,6 +1,6 @@
 # Scheming Symmetry - Evilginx & Nginx Setup
 
-![Scheming Symmetry](https://tcgplayer-cdn.tcgplayer.com/product/537729_in_1000x1000.jpg)
+<img src="https://tcgplayer-cdn.tcgplayer.com/product/192521_in_1000x1000.jpg" width="25%">
 
 ## Overview
 This repository provides a **push-button installer** for setting up **Evilginx, Burp Suite, and Nginx** as a coordinated reverse proxy system. You will need to run these scripts on the associated nginx and evilginx servers.
@@ -38,6 +38,8 @@ Run the following **on each respective server**:
 - `<full_domain>` = Fully qualified `nip.io` domain (e.g., `example.192-168-1-1.nip.io`)
 
 ## Configuration Details
+![Scheming Symmetry](https://raw.githubusercontent.com/twilson-bf/scheming_symmetry/refs/heads/main/image.png)
+
 - **Evilginx:** Handles phishing attacks, TLS termination, and session manipulation.
 - **Burp Suite:** Intercepts traffic for further analysis.
 - **Nginx:** Acts as a reverse proxy, dynamically routing paths to the correct backend servers.
