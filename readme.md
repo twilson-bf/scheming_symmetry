@@ -51,14 +51,14 @@ Run the following **on each respective server**:
 - JavaScript and cookie settings are rewritten to maintain seamless authentication.
 
 ## Notes
-- Ensure firewall rules **allow traffic on ports 80 and 443**.
+- Ensure hive ingress rules **allow traffic on ports 80 and 443** for both Nginx and Evilginx as well as **port 8080** on the burp server.
 - Evilginx requires **root privileges** to function correctly.
 - SSL certificates are automatically generated via **Let's Encrypt**.
 
 ## Troubleshooting
-- **Evilginx Not Responding?** Ensure `sudo evilginx` is running in the background.
+- **Evilginx Not Responding?** Ensure `sudo evilginx` is running. The script doesn't start it by default
 - **Nginx Errors?** Check logs: `sudo tail -f /var/log/nginx/error.log`
-- **Azure CDN Not Routing?** Double-check DNS mappings in your Azure portal.
+- **Azure CDN Not Routing?** Double-check DNS maps to the correct IP address.
 
 ---
 
