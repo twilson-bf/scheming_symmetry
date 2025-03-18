@@ -62,7 +62,7 @@ Run the following **on each respective server**:
 
 ---
 
-Enjoy scheming!
+_One for you, one for me!_
 ```
              .:..::..:.                        ...              ..            ........              
             :::?PBBP?:.:              ..:::^::^:::!7~^^:::::.   ~....       .:.!5GBGY~              
