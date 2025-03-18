@@ -1,4 +1,3 @@
-cat > nginx_setup.sh <<EOF
 #!/bin/bash
 # Push-button installer for Nginx Reverse Proxy
 # Usage: ./nginx_setup.sh <domain> <full_domain>
@@ -69,6 +68,3 @@ EON
 # Enable and Restart Nginx
 sudo ln -sf /etc/nginx/sites-available/fid-login /etc/nginx/sites-enabled/
 sudo systemctl restart nginx
-EOF
-
-chmod +x nginx_setup.sh
