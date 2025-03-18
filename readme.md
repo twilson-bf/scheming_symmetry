@@ -46,8 +46,8 @@ Run the following **on each respective server**:
 - **Azure CDN:** Routes requests through `azureedge.net` to obfuscate the final destination.
 
 ## Expected Behavior
-- Requests to `fid-login.azureedge.net/login` are proxied to Evilginx.
-- Requests to `fid-login.azureedge.net/www` are proxied accordingly.
+- Requests to `your-domain.azureedge.net/login` are proxied to Evilginx.
+- Requests to `your-domain.azureedge.net/www` are proxied accordingly.
 - JavaScript and cookie settings are rewritten to maintain seamless authentication.
 
 ## Notes
