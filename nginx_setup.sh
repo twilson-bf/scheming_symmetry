@@ -2,7 +2,7 @@
 # Push-button installer for Nginx Reverse Proxy
 # Usage: ./nginx_setup.sh <domain> <full_domain>
 
-DOMAIN=\$1
+DOMAIN=$1
 FULL_DOMAIN=$2
 
 # Install dependencies
