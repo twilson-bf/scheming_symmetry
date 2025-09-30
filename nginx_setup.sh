@@ -2,7 +2,7 @@
 # Push-button installer for Nginx Reverse Proxy
 # Usage: ./nginx_setup.sh <domain> <full_domain>
 
-DOMAIN=$1
+DOMAIN=\$1
 FULL_DOMAIN=$2
 
 # Install dependencies
@@ -22,7 +22,7 @@ server {
     ssl_session_cache shared:SSL:10m;
 
     location /login/ {
-        rewrite ^/login(/.*)$ $1 break;
+        rewrite ^/login(/.*)$ \$1 break;
         proxy_pass https://login.${FULL_DOMAIN};
         proxy_pass_request_headers on;
         proxy_http_version 1.1;
@@ -34,11 +34,11 @@ server {
         proxy_set_header X-Forwarded-Proto https;
         proxy_ssl_server_name on;
         proxy_ssl_verify off;
-        proxy_redirect ~^https?://login\.${FULL_DOMAIN}(/?.*)$ https://${DOMAIN}.azureedge.net/login$1;
+        proxy_redirect ~^https?://login\.${FULL_DOMAIN}(/?.*)$ https://${DOMAIN}.azureedge.net/login\$1;
     }
 
     location /www/ {
-        rewrite ^/www(/.*)$ $1 break;
+        rewrite ^/www(/.*)$ \$1 break;
         proxy_pass https://www.${FULL_DOMAIN};
         proxy_pass_request_headers on;
         proxy_http_version 1.1;
@@ -50,7 +50,7 @@ server {
         proxy_set_header X-Forwarded-Proto https;
         proxy_ssl_server_name on;
         proxy_ssl_verify off;
-        proxy_redirect ~^https?://www\.${FULL_DOMAIN}(/?.*)$ https://${DOMAIN}.azureedge.net/www$1;
+        proxy_redirect ~^https?://www\.${FULL_DOMAIN}(/?.*)$ https://${DOMAIN}.azureedge.net/www\$1;
     }
 
     location / {
